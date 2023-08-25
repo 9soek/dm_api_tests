@@ -1,24 +1,25 @@
 import requests
 
+
 def get_v1_account():
-  """
-  Get current user
-  :return:
-  """
-
-url = "http://5.63.153.31:5051/v1/account"
+    """
+    Get current user
+    :return:
+    """
 
 
-headers = {
-  'X-Dm-Auth-Token': '<string>',
-  'X-Dm-Bb-Render-Mode': '<string>',
-  'Accept': 'text/plain'
-}
+  url = "http://5.63.153.31:5051/v1/account"
 
-response = requests.request(
-  method="GET",
-  url=url,
-  headers=headers
-)
+  headers = {
+    'X-Dm-Auth-Token': '<string>',
+    'X-Dm-Bb-Render-Mode': '<string>',
+    'Accept': 'text/plain'
+  }
 
-print(response.text)
+  response = requests.request(
+    method="GET",
+    url=url,
+    headers=headers
+  )
+
+  print(response.text)
